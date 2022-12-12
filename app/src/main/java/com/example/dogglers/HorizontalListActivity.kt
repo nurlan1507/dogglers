@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.dogglers.adapter.DogCardAdapter
 import com.example.dogglers.const.Layout
+import com.example.dogglers.data.DataSource
 import com.example.dogglers.databinding.ActivityHorizontalListBinding
 
 class HorizontalListActivity : AppCompatActivity() {
@@ -32,7 +33,8 @@ class HorizontalListActivity : AppCompatActivity() {
 
         binding.horizontalRecyclerView.adapter = DogCardAdapter(
             applicationContext,
-            Layout.HORIZONTAL
+            Layout.HORIZONTAL,
+            DataSource.dogs
         )
 
         // Specify fixed size to improve performance
